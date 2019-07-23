@@ -8,6 +8,8 @@ TagManager:
   - Hand
   - Body
   - Marker
+  - ObjetoSuelto
+  - ObjetoInventario
   layers:
   - Default
   - TransparentFX

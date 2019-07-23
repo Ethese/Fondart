@@ -9,7 +9,7 @@ public class Hand : MonoBehaviour
     public SteamVR_Action_Boolean grabbing = null;
     public SteamVR_Action_Boolean gripping = null;
     public SteamVR_Action_Boolean move = null;
-    private SteamVR_Behaviour_Pose pose = null;
+    public SteamVR_Behaviour_Pose pose = null;
 
     // Interaction
     private FixedJoint joint = null;
@@ -50,7 +50,7 @@ public class Hand : MonoBehaviour
     void Update()
     {
         Interacted();
-        Debug.DrawRay(current.activeHand.transform.position, current.activeHand.transform.forward, Color.red);
+
         if (pl.isMoving)
         {
             Timer();
@@ -245,7 +245,7 @@ public class Hand : MonoBehaviour
         if (realTime <= 0)
         {
             realTime = 0;
-            go.transform.position = pl.transform.position;
+            //go.transform.position = pl.transform.position;
         }
         else
         {
