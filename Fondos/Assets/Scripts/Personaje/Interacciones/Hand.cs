@@ -50,7 +50,7 @@ public class Hand : MonoBehaviour
     void Update()
     {
         Interacted();
-
+        Debug.DrawRay(current.activeHand.transform.position, current.activeHand.transform.forward, Color.red);
         if (pl.isMoving)
         {
             Timer();
